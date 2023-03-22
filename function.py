@@ -1,5 +1,5 @@
+import csv
 filename = "winequality.csv"
-
 def read_data(filename): 
     """
       Dado un nombre de fichero conn muestras de vino devuelve un diccionario
@@ -11,13 +11,10 @@ def read_data(filename):
         _type_: _description_
     """
     f = open(filename, mode= "rt", encoding= "utf-8")
-    dato = {}
-    lineas = f.readline()   
-
-    listadicc = list(f)
-    print('lista', )
-    for reg in f: 
-        print(reg)
+    reader = csv.reader(f)
+    for row in reader: 
+        return(row)
+        dicctionary = dict(row)
     
 
 read_data(filename)
